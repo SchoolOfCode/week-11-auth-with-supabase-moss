@@ -4,7 +4,8 @@ export default async function Page() {
     const supabase = createClient()
     const { data: notes, error } = await (await supabase).from('notes').select()
     
-    console.log('Supabase response:', { data: notes, error })  // This will show in your server console
+    console.log('Supabase response:', { data: notes, error })  // This will show in your server console]
+    console.log("heelo")
     
     if (error) {
       console.error('Supabase error:', error)
